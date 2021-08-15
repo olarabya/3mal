@@ -22,7 +22,7 @@ Feature: Show reports
         And click on Show  button
         And  enter valid number record   
         And click on search button  
-        Then should be Showing 1 to 10 of total  entries (filtered from total entries)
+        Then should be Showing 1 to 10 of total entries (filtered from total entries)
 
      Scenario: admin can filter report  
         Given a user http://amalui.eu-west-1.elasticbeanstalk.com/#/pages/login
