@@ -1,18 +1,3 @@
-
-
-
-
- 
-
-
-
-
-
-
-
-
-
-
 Feature: Show reports 
 
     Scenario: admin can show the 'HR Report' without select profession from profession dropdown but fill other field
