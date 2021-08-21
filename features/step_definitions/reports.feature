@@ -202,7 +202,7 @@ Scenario: admin can show the 'Total Workers Report' without select profession fr
         And click on Show button inside report AmalWork page
         Then 'Show' button is inactive and the report does not show
 
-Scenario: admin show the 'Total Workers Report' without select project ,and profession 
+    Scenario: admin show the 'Total Workers Report' without select project ,and profession 
         Given a user http://amalui.eu-west-1.elasticbeanstalk.com/#/pages/login
         When user login using valid credentials 
         And logged in successfully and redirected to the home page 
@@ -222,7 +222,7 @@ Scenario: admin show the 'Total Workers Report' without select project ,and prof
         And click on Show button inside report AmalWork page
         Then 'Show' button is inactive and the report does not show
 
- Scenario: admin show the 'Total Workers Report' without select report period ,and profession 
+    Scenario: admin show the 'Total Workers Report' without select report period ,and profession 
         Given a user http://amalui.eu-west-1.elasticbeanstalk.com/#/pages/login
         When user login using valid credentials 
         And logged in successfully and redirected to the home page 
@@ -241,7 +241,7 @@ Scenario: admin show the 'Total Workers Report' without select project ,and prof
         And click on Show button inside report AmalWork page
         Then 'Show' button is inactive and the report does not show
          
- Scenario: admin show the 'Total Workers Report' without select project ,report period and profession 
+    Scenario: admin show the 'Total Workers Report' without select project ,report period and profession 
         Given a user http://amalui.eu-west-1.elasticbeanstalk.com/#/pages/login
         When user login using valid credentials 
         And logged in successfully and redirected to the home page 
@@ -272,7 +272,7 @@ Scenario: admin show the 'Total Workers Report' without select project ,and prof
         And click on 'Show' button inside report AmalWork page
         Then should be show the 'Total workers Report'
 
-  Scenario: admin can show the report when select project, report period and profession from dropdown but without select report type 
+    Scenario: admin can show the report when select project, report period and profession from dropdown but without select report type 
         Given a user http://amalui.eu-west-1.elasticbeanstalk.com/#/pages/login
         When user login using valid credentials 
         And logged in successfully and redirected to the home page 
@@ -282,7 +282,38 @@ Scenario: admin show the 'Total Workers Report' without select project ,and prof
         And click on 'Show' button inside report AmalWork page
         Then should be show 'HR Report' by default
 
-    Scenario: when show the report ,admin can search based on number of record   
+    Scenario: admin can show the 'Financial Report' when select report type , project from dropdown
+        Given a user http://amalui.eu-west-1.elasticbeanstalk.com/#/pages/login
+        When user login using valid credentials 
+        And logged in successfully and redirected to the home page 
+        And click on Reports option 
+        And select 'Financial Report' from Report type dropdown
+        And select project from project dropdown  
+        And click on 'Show' button inside report AmalWork page
+        Then should be show the 'Financial Report'
+
+    Scenario: admin show the 'Financial Report' without select project  
+        Given a user http://amalui.eu-west-1.elasticbeanstalk.com/#/pages/login
+        When user login using valid credentials 
+        And logged in successfully and redirected to the home page 
+        And click on Reports option 
+        And select'Financial Report' from Report type dropdown
+        And click on Show button inside report AmalWork page
+        Then 'Show' button is inactive and the report does not show
+
+    Scenario: admin show the 'Financial Report' with select report type, but project without type any thing    
+        Given a user http://amalui.eu-west-1.elasticbeanstalk.com/#/pages/login
+        When user login using valid credentials 
+        And logged in successfully and redirected to the home page 
+        And click on Reports option 
+        And select 'Financial Report' from Report type dropdown
+        And clicks inside the project dropdown without type anything
+        And click on 'Show' button inside report AmalWork page
+        Then 'Show' button is inactive and the report does not show 
+        And The 'project' text color should be red
+        And The 'Select project' text should be appear 
+
+    Scenario: when show the report ,admin can search records 
         Given a user http://amalui.eu-west-1.elasticbeanstalk.com/#/pages/login
         When user login using valid credentials 
         And logged in successfully and redirected to the home page 
@@ -292,11 +323,11 @@ Scenario: admin show the 'Total Workers Report' without select project ,and prof
         And select report period 
         And select profession (is optional)  
         And click on Show  button
-        And enter valid number of record      
+        And enter valid data of record      
         And click on search button  
-        Then should be Showing 1 to 10 of total  entries (filtered from total entries)
+        Then should be Showing 1 to 10 of total entries (filtered from total entries)
 
-    Scenario: admin can filter report  
+    Scenario:  filter report  
         Given a user http://amalui.eu-west-1.elasticbeanstalk.com/#/pages/login
         When user login using valid credentials 
         And logged in successfully and redirected to the home page 
@@ -308,15 +339,6 @@ Scenario: admin show the 'Total Workers Report' without select project ,and prof
         And check cells who wants to show with the report 
         And click on save button 
         Then should be Showing filtered report containing the selected cells 
-
-
-
-
-
-
- 
-
-
 
 
 
