@@ -475,8 +475,8 @@ Scenario: admin can show the 'Total Workers Report' without select profession fr
         And enter valid data of record      
         And click on search button  
         Then should be Showing 1 to 10 of total entries (filtered from total entries)
-
-    Scenario:  filter report  
+    
+    Scenario:  show the report ,and select entries/page from dropdown 
         Given a user http://amalui.eu-west-1.elasticbeanstalk.com/#/pages/login
         When user login using valid credentials 
         And logged in successfully and redirected to the home page 
@@ -484,11 +484,36 @@ Scenario: admin can show the 'Total Workers Report' without select profession fr
         And select report type 
         And select project 
         And select report period 
-        And click on Filter button
-        And check cells who wants to show with the report 
-        And click on save button 
-        Then should be Showing filtered report containing the selected cells 
+        And select profession (is optional)  
+        And click on Show  button
+        And select entries/page 25 from entries/page dropdown  
+        Then should be Showing 1 to 25 of total entries (filtered from total entries)
 
+    Scenario:  show the report ,and select entries/page 50 from dropdown 
+        Given a user http://amalui.eu-west-1.elasticbeanstalk.com/#/pages/login
+        When user login using valid credentials 
+        And logged in successfully and redirected to the home page 
+        And click on Reports option 
+        And select report type 
+        And select project 
+        And select report period 
+        And select profession (is optional)  
+        And click on Show  button
+        And select entries/page 50 from entries/page dropdown  
+        Then should be Showing 1 to 50 of total entries (filtered from total entries)
+
+    Scenario:  show the report ,and select entries/page All from dropdown 
+        Given a user http://amalui.eu-west-1.elasticbeanstalk.com/#/pages/login
+        When user login using valid credentials 
+        And logged in successfully and redirected to the home page 
+        And click on Reports option 
+        And select report type 
+        And select project 
+        And select report period 
+        And select profession (is optional)  
+        And click on Show  button
+        And select entries/page All from entries/page dropdown  
+        Then should be Showing all entries 
 
 
 
