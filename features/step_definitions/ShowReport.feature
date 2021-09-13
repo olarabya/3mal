@@ -108,7 +108,7 @@ Feature: Show reports
         And click on Show button inside report AmalWork page
         Then 'Show' button is disable 
         
-     Scenario: admin show the 'HR Report' without select project ,report period and profession 
+     Scenario: User show the 'HR Report' without select project ,report period and profession 
         Given a user http://amalui.eu-west-1.elasticbeanstalk.com/#/pages/login
         When user login using valid credentials 
         And logged in successfully and redirected to the home page 
@@ -117,7 +117,7 @@ Feature: Show reports
         And click on Show button inside report AmalWork page
         Then 'Show' button is disable    
         
-    Scenario: User can show the 'HR Report' when select report type , project, report period and profession dropdown
+    Scenario: User show the 'HR Report' when select report type , project, report period and profession dropdown
         Given a user http://amalui.eu-west-1.elasticbeanstalk.com/#/pages/login
         When user login using valid credentials 
         And logged in successfully and redirected to the home page 
@@ -215,7 +215,7 @@ Feature: Show reports
         Then 'Show' button is disable 
         And The 'select period' text color should be red
     
-    Scenario: User  show the 'Total Workers Report' with select report type,report period ,but project without type anything and without select profession    
+    Scenario: User show the 'Total Workers Report' with select report type,report period ,but project without type anything and without select profession    
         Given a user http://amalui.eu-west-1.elasticbeanstalk.com/#/pages/login
         When user login using valid credentials 
         And logged in successfully and redirected to the home page 
