@@ -25,7 +25,7 @@ Feature: Show reports
         And The 'project' text color should be red
         And The 'report period' text color should be red
         
-    Scenario: user show the'HR Report' by empty project,report period , without select profession from dropdown
+    Scenario: user show the'HR Report' by empty project,report period without select profession from dropdown
         Given a user http://amalui.eu-west-1.elasticbeanstalk.com/#/pages/login
         When user login using valid credentials 
         And logged in successfully and redirected to the home page 
@@ -48,7 +48,7 @@ Feature: Show reports
         And select report period from report period dropdown 
         And click on 'Show' button inside report AmalWork page
         Then 'Show' button should be disable 
-        And The ' Select project' text color should be red
+        And The 'Select project' text color should be red
         
     Scenario: User show the 'HR Report' by select report type,project without select report period 
         Given a user http://amalui.eu-west-1.elasticbeanstalk.com/#/pages/login
@@ -62,7 +62,7 @@ Feature: Show reports
         Then 'Show' button should be disable 
         And The 'select period' text color should be red
         
-    Scenario: User show the 'HR Report' by select report type,project ,but without select report period anything and profession    
+    Scenario: User show the 'HR Report' by select report type,project without select report period anything and profession    
         Given a user http://amalui.eu-west-1.elasticbeanstalk.com/#/pages/login
         When user login using valid credentials 
         And logged in successfully and redirected to the home page 
@@ -74,7 +74,7 @@ Feature: Show reports
         Then 'Show' button should be disable 
         And The 'select period' text color should be red
         
-     Scenario: User show the 'HR Report' by select report type,report period ,but without select project and profession    
+     Scenario: User show the 'HR Report' by select report type,report period without select project and profession    
         Given a user http://amalui.eu-west-1.elasticbeanstalk.com/#/pages/login
         When user login using valid credentials 
         And logged in successfully and redirected to the home page 
@@ -187,7 +187,7 @@ Feature: Show reports
         And The 'project' text color should be red
         And The 'Select project' text should be appear 
 
-    Scenario: User show the 'Total Workers Report' by select report type,project ,without select report period  
+    Scenario: User show the 'Total Workers Report' by select report type,project without select report period  
         Given a user http://amalui.eu-west-1.elasticbeanstalk.com/#/pages/login
         When user login using valid credentials 
         And logged in successfully and redirected to the home page 
@@ -211,7 +211,7 @@ Feature: Show reports
         Then 'Show' button should be disable 
         And The 'select period' text color should be red
     
-    Scenario: User show the 'Total Workers Report' by select report type,report period without select project  and profession    
+    Scenario: User show the 'Total Workers Report' by select report type,report period without select project and profession    
         Given a user http://amalui.eu-west-1.elasticbeanstalk.com/#/pages/login
         When user login using valid credentials 
         And logged in successfully and redirected to the home page 
@@ -263,7 +263,7 @@ Feature: Show reports
         And click on 'Show' button inside report AmalWork page
         Then should be show the 'Total workers Report'
 
-    Scenario: User show the 'Financial Report' by select report type , project from dropdown
+    Scenario: User show the 'Financial Report' by select report type ,project from dropdown
         Given a user http://amalui.eu-west-1.elasticbeanstalk.com/#/pages/login
         When user login using valid credentials 
         And logged in successfully and redirected to the home page 
@@ -324,7 +324,7 @@ Feature: Show reports
         And logged in successfully and redirected to the home page 
         And click on Reports option 
         And select 'History Report'from Report type dropdown
-        And The user clicks inside the project dropdown without type anything
+        And The user clicks inside the project dropdown without select anything
         And The user clicks inside the start date without enter anything
         And The user clicks inside the end date without enter anything
         And The user clicks inside the profession dropdown without select anything
