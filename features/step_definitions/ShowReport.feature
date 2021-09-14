@@ -11,69 +11,67 @@ Feature: Show reports
         And click on 'Show' button inside report AmalWork page
         Then should be show the 'Hr Report'
         
-    Scenario: User show the 'HR Report' with empty project, report period and profession from dropdown   
+    Scenario: User show the 'HR Report' by empty project, report period and profession from dropdown   
         Given a user http://amalui.eu-west-1.elasticbeanstalk.com/#/pages/login
         When user login using valid credentials 
         And logged in successfully and redirected to the home page 
         And click on Reports option 
         And select 'HR Report'from Report type dropdown
-        And The user clicks inside the project dropdown without type anything
-        And The user clicks inside the report period dropdown without type anything
-        And The user clicks inside the profession dropdown without type anything
+        And The user clicks inside the project dropdown without select anything
+        And The user clicks inside the report period dropdown without select anything
+        And The user clicks inside the profession dropdown without select anything
         And click on 'Show'  button inside report AmalWork page
-        Then 'Show' button is disable and the report does not show 
+        Then 'Show' button should be disable 
         And The 'project' text color should be red
         And The 'report period' text color should be red
         
-    Scenario: user show the'HR Report' with empty project,report period ,and without select profession from dropdown
+    Scenario: user show the'HR Report' by empty project,report period , without select profession from dropdown
         Given a user http://amalui.eu-west-1.elasticbeanstalk.com/#/pages/login
         When user login using valid credentials 
         And logged in successfully and redirected to the home page 
         And click on Reports option 
         And select 'HR Report' from Report type dropdown
-        And The user clicks inside the project dropdown without type anything
-        And The user clicks inside the report period dropdown without type anything
+        And The user clicks inside the project dropdown without select anything
+        And The user clicks inside the report period dropdown without select anything
         And click on 'Show' button inside report AmalWork page
-        Then 'Show' button is disable 
+        Then 'Show' button should be disable 
         And The 'project' text color should be red
         And The 'report period' text color should be red
          
-    Scenario: User show the 'HR Report' with select report type,report period ,profession(obtional) but project without type any thing    
+    Scenario: User show the 'HR Report' by select report type,report period ,without select project 
         Given a user http://amalui.eu-west-1.elasticbeanstalk.com/#/pages/login
         When user login using valid credentials 
         And logged in successfully and redirected to the home page 
         And click on Reports option 
         And select 'HR Report' from Report type dropdown
-        And clicks inside the project dropdown without type anything
+        And clicks inside the project dropdown without select anything
         And select report period from report period dropdown 
-        And select profession from profession dropdown(obtional) 
         And click on 'Show' button inside report AmalWork page
-        Then 'Show' button is disable 
+        Then 'Show' button should be disable 
         And The ' Select project' text color should be red
         
-    Scenario: User show the 'HR Report' with select report type,project ,profession(obtional) but report period without type anything    
+    Scenario: User show the 'HR Report' by select report type,project without select report period 
         Given a user http://amalui.eu-west-1.elasticbeanstalk.com/#/pages/login
         When user login using valid credentials 
         And logged in successfully and redirected to the home page 
         And click on Reports option 
         And select 'HR Report' from Report type dropdown
         And select project from project dropdown 
-        And clicks inside the report period dropdown without type anything
-        And select profession from profession dropdown (obtional)
+        And clicks inside the report period dropdown without select anything
         And click on 'Show' button inside report AmalWork page
-        Then 'Show' button is disable 
+        Then 'Show' button should be disable 
         And The 'select period' text color should be red
         
-    Scenario: User show the 'HR Report' with select report type,project ,but report period without type anything and without select profession    
+    Scenario: User show the 'HR Report' by select report type,project ,but without select report period anything and profession    
         Given a user http://amalui.eu-west-1.elasticbeanstalk.com/#/pages/login
         When user login using valid credentials 
         And logged in successfully and redirected to the home page 
         And click on Reports option 
         And select 'HR Report' from Report type dropdown
         And select project from project dropdown 
-        And clicks inside the report period dropdown without type anything
+        And clicks inside the report period dropdown without select anything
         And click on 'Show' button inside report AmalWork page
-        Then 'Show' button is disable 
+        Then 'Show' button should be disable 
         And The 'select period' text color should be red
         
      Scenario: User show the 'HR Report' with select report type,report period ,but project without type anything and without select profession    
