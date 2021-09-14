@@ -13,7 +13,7 @@ Feature: filter report
         And click on save button 
         Then should be Showing filtered report containing the selected cells
     
-    Scenario: when show the 'HR Report'  you can reset filter 
+    Scenario: when show the 'HR Report' you can reset filter 
         Given a user http://amalui.eu-west-1.elasticbeanstalk.com/#/pages/login
         When user login using valid credentials 
         And logged in successfully and redirected to the home page 
@@ -26,12 +26,10 @@ Feature: filter report
         Then should be show the 'HR Report'
         And click on reset filter button 
         Then should be clear project feild ,report period, and profession  
-        And The 'project' text color should be red
-        And The 'Select project' text should be appear 
-        And The 'report period' text color should be red
-        And The 'Select Report Period' text should be appear 
+        And The 'Select project' text color should be red
+        And The 'Select report period' text color should be red
     
-    Scenario: when show the 'Financial Report'  you can reset filter 
+    Scenario: when show the 'Financial Report' you can reset filter 
         Given a user http://amalui.eu-west-1.elasticbeanstalk.com/#/pages/login
         When user login using valid credentials 
         And logged in successfully and redirected to the home page 
@@ -42,10 +40,9 @@ Feature: filter report
         Then should be show the 'Financial Report'
         And click on reset filter button 
         Then should be clear project feild 
-        And The 'project' text color should be red
-        And The 'Select project' text should be appear 
+        And The 'Select project' text color should be red
 
-    Scenario: when show the 'Total workers Report'  you can  reset filter 
+    Scenario: when show the 'Total workers Report' you can  reset filter 
         Given a user http://amalui.eu-west-1.elasticbeanstalk.com/#/pages/login
         When user login using valid credentials 
         And logged in successfully and redirected to the home page 
@@ -58,10 +55,8 @@ Feature: filter report
         Then should be show the 'Total workers Report'
         And click on reset filter button 
         Then should be clear project feild ,report period, and profession  
-        And The 'project' text color should be red
-        And The 'Select project' text should be appear 
-        And The 'report period' text color should be red
-        And The 'Select Report Period' text should be appear 
+        And The 'Select project' text color should be red
+        And The 'Select report period' text color should be red
 
     Scenario: when show the 'History Report' you can reset filter 
         Given a user http://amalui.eu-west-1.elasticbeanstalk.com/#/pages/login
@@ -76,13 +71,11 @@ Feature: filter report
         And click on 'Show' button inside report AmalWork page
         Then should be show the 'History Report'
         And click on reset filter button 
-        Then should be clear project feild ,start date , end date and profession 
+        Then should be clear project feild ,start date ,end date and profession 
         And The 'project' text color should be red
         And The 'Select project' text should be appear 
-        And The 'start date' text color should be red
-        And The 'Choose start date' text should be appear 
-        And The 'end date' text color should be red
-        And The 'Choose end date' text should be appear 
+        And The 'Choose start date' text color should be red
+        And The 'Choose end date' text color should be red
 
         
 
