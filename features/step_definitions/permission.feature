@@ -15,7 +15,7 @@ Feature: 3mal-Admin Manage the account users
    Scenario: Administrator gives Admin permissions to user
       Given The Admin Navigated to Permissions page
       When The Admin select system account 
-      And The Admin choose the username  
+      And The Admin select the username  
       And The Admin assigne Admin role to user selected  
       And Logout from admin account
       And Login to 3mal site with user information  
@@ -26,7 +26,7 @@ Feature: 3mal-Admin Manage the account users
    Scenario: Administrator gives Account permissions to user
       Given The Admin Navigated to Permissions page
       When The Admin select system account 
-      And The Admin choose the username  
+      And The Admin select the username  
       And The Admin assigne Account	role to user selected  
       And Logout from admin account
       And Login to 3mal site with user information  
@@ -34,9 +34,10 @@ Feature: 3mal-Admin Manage the account users
       And The Reports,Dashboard,Attendance,My Files,Permissions and My projects tab should be appear on the left menue side  
       And The new user role should become is "Account"
 
-   Scenario: Add a New Role to Account
-      Given the Admin Navigated to Permissions page
-      When the Admin enter the role name
+   Scenario: Administrator add Role to Account
+      Given The Admin Navigated to Permissions page
+      When The Admin select system account 
+      And The Admin enter the role name
       And choose roles under Roles Name  
       And click on 'Add Role' button 
       Then the account role should be is added
