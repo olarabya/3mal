@@ -34,11 +34,19 @@ Feature: 3mal-Admin Manage the account users
       And The Reports,Dashboard,Attendance,My Files,Permissions and My projects tab should be appear on the left menue side  
       And The new user role should become is "Account"
 
-   Scenario: Administrator add Role to Account
+   Scenario: Administrator add Role to Account user
       Given The Admin Navigated to Permissions page
       When The Admin select system account 
       And The Admin enter the role name
-      And choose roles under Roles Name  
+      And  The Admin select roles 
+      And click on 'Add Role' button 
+      Then the account role should be is added
+      And displayed under the Account Roles
+      
+ Scenario: Administrator Delete selected Role from Account roles
+      Given The Admin Navigated to Permissions page
+      When The Admin select system account 
+      And  The Admin select roles 
       And click on 'Add Role' button 
       Then the account role should be is added
       And displayed under the Account Roles
