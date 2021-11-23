@@ -62,4 +62,3 @@ Feature: 3mal-Admin Manage the account users
       And The User click on My Projects tab on the left menue side 
       Then The Project should be appear on My Projects page  
        
-      Then the project should be added to his account 
