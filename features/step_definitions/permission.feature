@@ -34,24 +34,32 @@ Feature: 3mal-Admin Manage the account users
       And The Reports,Dashboard,Attendance,My Files,Permissions and My projects tab should be appear on the left menue side  
       And The new user role should become is "Account"
 
-   Scenario: Administrator add Role to Account user
+   Scenario: Administrator add a New Role to Account user
       Given The Admin Navigated to Permissions page
       When The Admin select system account 
+      And The Admin click on "Add a New Role to Account" 
       And The Admin enter the role name
-      And  The Admin select roles 
-      And click on 'Add Role' button 
-      Then the account role should be is added
-      And displayed under the Account Roles
+      And The Admin select roles 
+      And Click on 'Add Role' button 
+      Then The new role should be added to Account Roles  
+      And Displayed under the Account Roles
       
- Scenario: Administrator Delete selected Role from Account roles
+ Scenario: Administrator Delete selected Role from Account 
       Given The Admin Navigated to Permissions page
       When The Admin select system account 
-      And  The Admin select roles 
-      And click on 'Add Role' button 
-      Then the account role should be is added
-      And displayed under the Account Roles
+      And The Admin select the username  
+      And The Admin select role name  
+      And Click on 'Delete Selected Roles Frome Account' button 
+      Then The account role should be Deleted
 
   Scenario: the Admin edit users Projects
       Given the Admin Navigated to Permissions page
-      When I select the project name 
-      Then the user will have these project 
+      When The Admin select system account 
+      And The Admin click on Edit Users Project 
+      And The Admin assigne the project name to user selected 
+      And Logout from admin account
+      And Login to 3mal site with user information
+      And The User click on My Projects tab on the left menue side 
+      Then The Project should be appear on My Projects page  
+       
+      Then the project should be added to his account 
