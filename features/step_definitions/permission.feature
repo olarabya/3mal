@@ -55,6 +55,7 @@ Feature: 3mal-Admin Manage the account users
   Scenario: the Admin edit users Projects
       Given the Admin Navigated to Permissions page
       When The Admin select system account 
+      And The Admin select the user name 
       And The Admin click on Edit Users Project 
       And The Admin assigne the project name to user selected 
       And Logout from admin account
