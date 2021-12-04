@@ -52,8 +52,8 @@ Feature: 3mal-Admin Manage the account users
       And Click on 'Delete Selected Roles Frome Account' button 
       Then The account role should be Deleted
 
-  Scenario: the Admin edit users Projects
-      Given the Admin Navigated to Permissions page
+  Scenario: The Admin edit users Projects
+      Given The Admin Navigated to Permissions page
       When The Admin select system account 
       And The Admin select the user name 
       And The Admin click on Edit Users Project 
