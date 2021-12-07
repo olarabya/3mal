@@ -1,39 +1,44 @@
 Feature: 3mal-Admin Manage the account users
 
-   Scenario: Administrator gives Worker permissions to user
+   Scenario: Administrator gives "Worker permissions" to user
 
       Given The Admin Navigated to Permissions page
-      When The Admin select system account 
-      And The Admin select the username
-      And The Admin assigne worker role to user selected 
+      When The Admin select "System Account" 
+      And The Admin select "User Name"
+      And The Admin assigne "Worker" role to user selected 
       And Logout from admin account
-      And Login to 3mal site with user information  
+      And Navigated to login page
+      And Type login information for the user selected
+      And click on 'Login' button
       Then The "Login Field Due To : Access Denied" message should be appear 
 
 
-   Scenario: Administrator gives Admin permissions to user
+   Scenario: Administrator gives "Admin permissions" to user
       Given The Admin Navigated to Permissions page
-      When The Admin select system account 
-      And The Admin select the username  
-      And The Admin assigne Admin role to user selected  
+      When The Admin select "System Account" 
+      And The Admin select  "User Name"  
+      And The Admin assigne "Admin" role to user selected  
       And Logout from admin account
-      And Login to 3mal site with user information  
-      Then The user should be login to his account  
+      And Navigated to login page
+      And Type login information for the user selected
+      And click on 'Login' button 
+      Then The user should be login successfully to his account  
       And The my projects and Permissions tab should be appear on the left menue side  
       And The new user role should become is "Admin"
       
-   Scenario: Administrator gives Account permissions to user
+   Scenario: Administrator gives "Account permissions" to user
       Given The Admin Navigated to Permissions page
-      When The Admin select system account 
-      And The Admin select the username  
-      And The Admin assigne Account	role to user selected  
+      When The Admin select "System Account" 
+      And The Admin select "User Name"  
+      And The Admin assigne "Account"role to user selected  
       And Logout from admin account
-      And Login to 3mal site with user information  
-      Then The user should be login to his account  
+      And Navigated to login page
+      And Type login information for the user selected
+      Then The user should be login successfully to his account  
       And The Reports,Dashboard,Attendance,My Files,Permissions and My projects tab should be appear on the left menue side  
       And The new user role should become is "Account"
 
-   Scenario: Administrator add a 'Reports page' roles to user
+   Scenario: Administrator add a "Reports page" roles to user
       Given The Admin Navigated to Permissions page
       When The Admin select system account
       And The Admin select the username  
