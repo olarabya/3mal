@@ -37,18 +37,27 @@ Feature: 3mal-Admin Manage the account users
       Then The user should be login successfully to his account  
       And The Reports,Dashboard,Attendance,My Files,Permissions and My projects tab should be appear on the left menue side  
       And The new user role should become is "Account"
+      
+/////////////////////////////////////////////////////
+
+   Scenario: Administrator get add new roles page 
+      Given The Admin Navigated to Permissions page
+      When The Admin select "System Account"
+      And The Admin select the "User Name" 
+      And The Admin click on "Add a New Role to Account" 
+      Then Form "Add a New Role to Account" Should be appear 
 
    Scenario: Administrator add a "Reports page" roles to user
-      Given The Admin Navigated to Permissions page
-      When The Admin select system account
-      And The Admin select the username  
-      And The Admin click on "Add a New Role to Account" 
-      And The Admin enter the role name
-      And The Admin assigne pages Reports Role to user selected 
+      Given The Admin Navigated to "Add new roles page"
+      When The Admin enter the role name
+      And The Admin assigne pages Reports Role 
       And The Admin assigne 'HR Report' Type
       And Click on 'Add Role' button 
       Then The new role should be added to Account Roles  
       And Displayed under the Account Roles
+      
+   Scenario: Validate that the user can add new role successfully 
+   Given 
       When Logout from admin acount
       And Navigated to login page
       And Type login information for the user selected
@@ -61,7 +70,7 @@ Feature: 3mal-Admin Manage the account users
    Scenario: Administrator add a 'Reports page' roles to user
       Given The Admin Navigated to Permissions page
       When The Admin select system account
-      And The Admin select the username  
+      And The Admin select the User Name  
       And The Admin click on "Add a New Role to Account" 
       And The Admin enter the role name
       And The Admin assigne pages 'Reports' Role to user selected 
@@ -126,8 +135,8 @@ Feature: 3mal-Admin Manage the account users
       
    Scenario: Administrator add a 'Attendance page' roles to user
       Given The Admin Navigated to Permissions page
-      When The Admin select system account
-      And The Admin select the username  
+      When The Admin select "System Account"
+      And The Admin select the "User Name " 
       And The Admin click on "Add a New Role to Account" 
       And The Admin enter the role name
       And The Admin assigne pages 'Attendance' Role to user selected 
