@@ -57,16 +57,14 @@ Feature: 3mal-Admin Manage the account users
       And Displayed under the Account Roles
       
    Scenario: Validate that the user can add new role successfully 
-   Given 
-      When Logout from admin acount
-      And Navigated to login page
-      And Type login information for the user selected
-      And Click on'Login'button
-      Then The 'Reports' tab should be appear on the left menue side 
+      Given The User is logged in to the website
+      And Their is an existing Role 
+      And The User Navigated to the "Reports Page"
       When Click on 'Repotrs'tab 
       And Select Report Type 
       Then The 'HR' Report type should be appear only 
        
+       //////////////////////////////////////
    Scenario: Administrator add a 'Reports page' roles to user
       Given The Admin Navigated to Permissions page
       When The Admin select system account
